@@ -1,0 +1,28 @@
+version: "3.1"
+
+rules:
+
+#- rule: Say goodbye anytime the user says goodbye
+ # steps:
+ # - intent: goodbye
+ # - action: utter_goodbye
+
+#- rule: fallback
+#  steps:
+ # - intent: nlu_fallback
+  #- action: action_fallback
+#- rule: Ask the user to rephrase in case of low NLU confidence
+#  condition:
+#  - confidence: 0.7  # Replace with your desired confidence threshold
+#  steps:
+#  - intent: nlu_fallback
+#  - action: utter_ask_rephrase
+#- rule: Say 'I am a bot' anytime the user challenges
+#  steps:
+#  - intent: bot_challenge
+#  - action: utter_iamabot
+  
+#- rule: Ask the user to rephrase in case of low NLU confidence
+#  steps:
+#  - intent: nlu_fallback
+#  - action: utter_please_rephrase

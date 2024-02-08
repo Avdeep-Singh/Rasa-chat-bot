@@ -1,0 +1,494 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - user: "Hi"
+  - action: utter_greet
+#  - action: utter_greet
+#  - intent: mood_great
+#  - action: utter_happy
+
+#- story: sad path 1
+#  steps:
+#  - intent: greet
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: affirm
+#  - action: utter_happy
+
+#- story: sad path 2
+#  steps:
+#  - intent: greet
+#  - user:
+#  - action: utter_greet
+#  - intent: mood_unhappy
+#  - action: utter_cheer_up
+#  - action: utter_did_that_help
+#  - intent: deny
+#  - action: utter_goodbye
+
+
+
+- story: about profile
+  steps:
+  - user: "complete profile"
+  - action: utter_profile
+
+- story: About Profile F
+  steps:
+  - user: "profile completion"
+  - action: utter_profile
+
+- story: About Profile S
+  steps:
+  - user: "finish profile"
+  - action: utter_profile 
+
+- story: about Gofillform
+  steps:
+  - user: "what is Gofillform?"
+  - action: utter_Gofillform
+
+- story: who Gofillform
+  steps:
+  - user: "who is Gofillform"
+  - action: utter_Gofillform
+
+- story: explain Gofillform
+  steps:
+  - user: "can you explain Gofillform?"
+  - action: utter_Gofillform
+
+- story: about download
+  steps:
+  - user: "download form hardcopy"
+  - action: utter_about_download
+
+- story: About Download F
+  steps:
+  - user: "hardcopy of the form?"
+  - action: utter_about_download
+
+- story: About Download S
+  steps:
+  - user: "download the form?"
+  - action: utter_about_download
+
+- story: privacy
+  steps:
+  - user: "safety and privecy policy"
+  - action: utter_privacy
+
+- story: Privacy F
+  steps:
+  - user: "profile secure and privacy"
+  - action: utter_privacy
+
+- story: Privacy S
+  steps:
+  - user: "profile security"
+  - action: utter_privacy
+
+- story: fixing_application
+  steps:
+  - user: "Application form charges"
+  - action: utter_fixing_application
+
+- story: Fixing Application F
+  steps:
+  - user: "Cost of application form"
+  - action: utter_fixing_application
+
+- story: Fixing Application_S
+  steps:
+  - user: " application form fees"
+  - action: utter_fixing_application
+
+- story: froms_from_other_country
+  steps:
+  - user: "other country form"
+  - action: utter_froms_from_other_country
+
+- story: Froms From Other Country F
+  steps:
+  - user: "forms from different countries"
+  - action: utter_froms_from_other_country
+
+- story: Froms From Other Country S
+  steps:
+  - user: "international forms"
+  - action: utter_froms_from_other_country
+
+- story: about admission
+  steps:
+  - user: "Admission guarantee"
+  - action: utter_developments_of_admission_process
+
+- story: About Admission F
+  steps:
+  - user: "Is admission guaranteed?"
+  - action: utter_developments_of_admission_process
+
+- story: About Admission S
+  steps:
+  - user: "admission  Assurance"
+  - action: utter_developments_of_admission_process
+
+- story: support_services
+  steps:
+  - user: "support services"
+  - action: utter_support_services
+
+- story: Support Services F
+  steps:
+  - user: "customer support"
+  - action: utter_support_services
+
+- story: Support Services S
+  steps:
+  - user: "customer services"
+  - action: utter_support_services
+
+- story: friends_form
+  steps:
+  - user: "apply for friend"
+  - action: utter_friends_form
+
+- story: Friends Form F
+  steps:
+  - user: "friend's application"
+  - action: utter_friends_form
+
+- story: Friends Form S
+  steps:
+  - user: "relatives application"
+  - action: utter_friends_form
+
+- story: form_submission
+  steps:
+  - user: "form submission"
+  - action: utter_form_submission
+
+- story: Form Submission F
+  steps:
+  - user: "submitting the form"
+  - action: utter_form_submission
+
+- story: Form Submission S
+  steps:
+  - user: "submit  form?"
+  - action: utter_form_submission
+
+- story: program_fee
+  steps:
+  - user: "program fee"
+  - action: utter_program_fee
+
+- story: application status
+  steps:
+  - user: "application status / updates"
+  - action: utter_application_status
+
+- story: Program Fee F
+  steps:
+  - user: "fees for the program"
+  - action: utter_program_fee
+
+- story: Program Fee S
+  steps:
+  - user: "cost of program"
+  - action: utter_program_fee
+
+- story: claim_for_refund
+  steps:
+  - user: "refund"
+  - action: utter_claim_for_refund
+
+- story: rufund_policy_1
+  steps:
+  - user: "How can i clame refund"
+  - action: utter_refund_policy_1
+
+- story: rufund_policy_2
+  steps:
+  - user: "what is refund policy"
+  - action: utter_refund_policy_2
+
+- story: rufund_policy_3
+  steps:
+  - user: "what are the refund policies"
+  - action: utter_refund_policy_3
+
+- story: developments_of_admission_process
+  steps:
+  - user: "admission process after closing date"
+  - action: utter_developments_of_admission_process
+
+- story: user base
+  steps:
+  - user: "Why should I register?"
+  - action: utter_about_userbase
+
+- story: who user base
+  steps:
+  - user: "Who can register?"
+  - action: utter_about_userbase
+
+- story: form_filling_guidance 
+  steps:
+  - user: "i need Guidance for filling form"
+  - action: utter_guidance
+
+- story: form_filling_help 
+  steps:
+  - user: "i need help for filling form"
+  - action: utter_guidance 
+
+- story: ug_Course_Information
+  steps:
+    - user: "under graduation courses?"
+    - action: utter_ug_course_information
+
+- story: pg_course_information
+  steps:
+  - user: "post graduation courses?"
+  - action: utter_pg_course_information
+
+- story: course_info_all
+  steps:
+  - user: "All courses?"
+  - action: utter_all_courses_info
+  
+- story: course_apply
+  steps:
+  - user: "How to Apply for a Course?"
+  - action: utter_application_process
+
+- story: application_apply
+  steps:
+  - user: "How to Apply for a application"
+  - action: utter_application_process
+
+- story: application_fill
+  steps:
+  - user: "How to fill application"
+  - action: utter_application_process
+
+- story: contact_information
+  steps:
+  - user: "Contact us and working hours"
+  - action: utter_contact_information
+
+- story: discounts_offers
+  steps:
+  - user: "discounts?"
+  - action: utter_info_discounts_offers
+
+- story: offers
+  steps:
+  - user: "offers"
+  - action: utter_info_discounts_offers
+
+- story: coupons
+  steps:
+  - user: "coupons"
+  - action: utter_info_discounts_offers
+
+- story: actions_for_late_applications
+  steps:
+  - user: "late application"
+  - action: utter_actions_for_late_applications
+
+- story: actions_for_delayed_applications
+  steps:
+  - user: "delayed application"
+  - action: utter_actions_for_late_applications
+ 
+- story: application_closing_soon
+  steps:
+  - user: "closing soon"
+  - action: utter_application_closing_7days
+
+- story: application_closing_days
+  steps:
+  - user: "closing in days"
+  - action: utter_application_closing_7days
+
+- story: news_and_events
+  steps:
+  - user: "news and events?"
+  - action: utter_news_event
+
+- story: register_your_institute
+  steps:
+  - user: "insittute register"
+  - action: utter_link_your_institute
+
+- story: link_your_institute
+  steps:
+  - user: "insittute link"
+  - action: utter_link_your_institute
+
+- story: insights
+  steps:
+  - user: "gofillform insights"
+  - action: utter_insights
+
+- story: list_of_streams
+  steps:
+  - user: "all stream"
+  - action: utter_list_of_streams
+
+- story: list_of_specialization
+  steps:
+  - user: "all specializations"
+  - action: utter_list_of_streams
+
+- story: list_of_courses
+  steps:
+  - user: "all courses"
+  - action: utter_list_of_streams
+
+- story: Inquiry about Science Courses
+  steps:
+  - user: "science courses"
+  - action: utter_science_course_information
+
+- story: Inquiry about Science application
+  steps:
+  - user: "science application"
+  - action: utter_science_course_information
+
+- story: Inquiry about Pharmacy Courses
+  steps:
+  - user: "Pharmacy courses "
+  - action: utter_pharmacy_course_information
+
+- story: Inquiry about Pharmacy application
+  steps:
+  - user: "Pharmacy application"
+  - action: utter_pharmacy_course_information
+
+- story: Inquiry about Engineering Courses
+  steps:
+  - user: " Engineering courses"
+  - action: utter_engineering_course_information
+
+- story: Inquiry about Engineering application
+  steps:
+  - user: " Engineering application"
+  - action: utter_engineering_course_information
+
+- story: Inquiry about Arts Courses
+  steps:
+  - user: " Arts courses"
+  - action: utter_arts_course_information
+
+- story: Inquiry about Arts application
+  steps:
+  - user: " Arts application"
+  - action: utter_arts_course_information
+
+- story: Inquiry about Commerce Courses
+  steps:
+  - user: " Commerce courses"
+  - action: utter_commerce_course_information
+
+- story: Inquiry about Commerce application
+  steps:
+  - user: " Commerce application"
+  - action: utter_commerce_course_information
+
+- story: Inquiry about Medicine Course
+  steps:
+  - user: " Medicine course"
+  - action: utter_medicine_course_information
+
+- story: Inquiry about Medicine application
+  steps:
+  - user: " Medicine application"
+  - action: utter_medicine_course_information
+
+- story: Inquiry about Business Management Course
+  steps:
+  - user: " Business Management course"
+  - action: utter_business_management_course_information
+
+- story: Inquiry about Business Management application
+  steps:
+  - user: " Business Management application"
+  - action: utter_business_management_course_information
+
+- story: Inquiry about Nursing Course
+  steps:
+  - user: "Nursing course"
+  - action: utter_nursing_course_information
+
+- story: Inquiry about Nursing application
+  steps:
+  - user: "Nursing application"
+  - action: utter_nursing_course_information
+
+- story: Inquiry about Law Course
+  steps:
+  - user: "Law course"
+  - action: utter_law_course_information
+
+- story: Inquiry about Law application
+  steps:
+  - user: "Law application"
+  - action: utter_law_course_information
+
+- story: Inquiry about Architecture Course
+  steps:
+  - user: "Architecture course "
+  - action: utter_architecture_course_information
+
+- story: Inquiry about Architecture application
+  steps:
+  - user: "Architecture application"
+  - action: utter_architecture_course_information
+
+- story: Inquiry about Payment Methods
+  steps:
+  - user: "payment methods"
+  - action: utter_payment_methods
+
+- story: pay
+  steps:
+  - user: "how can i pay"
+  - action: utter_payment_methods
+
+- story: individual
+  steps:
+  - user: "I am an Individual"
+  - action: utter_individual 
+
+- story: business
+  steps:
+  - user: "I am Business"
+  - action: utter_business
+
+- story: latest courses
+  steps:
+  - user: "latest courses"
+  - action: utter_latest_courses
+
+- story: trending couses
+  steps:
+  - user: "trending courses"
+  - action: utter_latest_courses                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      
+
+
+
+
+
+  
+
+
+
+

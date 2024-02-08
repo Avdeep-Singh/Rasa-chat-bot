@@ -1,0 +1,1 @@
+Your Rasa model is trained and saved at 'models\20240125-153333-mild-plane.tar.gz'.

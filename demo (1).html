@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <title>Rasa Chat Widget</title>
+    <style>
+        #chat-widget {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 400px;
+            height: 500px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        #chat-header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        #chat-messages {
+            height: 250px;
+            overflow-y: auto;
+            padding: 10px;
+            background-image: url('https://briskon.com/wp-content/uploads/2023/06/logo-gofillform.jpg');
+            background-size: cover;
+        }
+
+        #user-input-container {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+        }
+
+        #user-input {
+            position: fixed;
+            bottom: 40px;
+            width: 300px;
+            
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        #send-button {
+            position: fixed;
+            bottom: 37px;
+            right: 50px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #chat-buttons {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px;
+        }
+
+        .chat-option-button {
+            flex: 0 0 48%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .page {
+            display: none;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .back-button,
+        .option-button {
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .no-chat {
+            display: none;
+        }
+
+        .bot-response {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .hide {
+            display: none !important;
+        }
+
+        /* .show{
+  display:block;
+} */
+    </style>
+</head>
+
+<body>
+ 
+    <div id="chat-widget">
+        <div id="chat-header">Chat with Virtual Assistant</div>
+
+        <!-- New buttons for user options -->
+        <div id="chat-buttons">
+            <button class="chat-option-button show" id="visible" onclick="showPage('applicant-page')">Applicant</button>
+            <button class="chat-option-button" onclick="showPage('institution-page')">Institution</button>
+        </div>
+
+        <!-- Pages for Applicant and Institution -->
+    
+        <div id="applicant-page" class="page">
+            <p>Hello, Applicant! I'm XYZ, and I'm here to assist you. How can I help you today? 
+               Please choose a query from the options below, or feel free to type your custom question.
+            </p>
+            
+            <button id= "op_app_1" class="option-button" onclick="sendMessage('op_app_1'), backToMainMenu()" value="How to Apply for a Course?">Want to know you can join?</button>
+            <button id= "op_app_2" class="option-button" onclick="sendMessage('op_app_2'), backToMainMenu()" value="what are the refund policies?">Want to know about refund?</button>
+            <button id= "op_app_3" class="option-button" onclick="sendMessage('op_app_3'), backToMainMenu()" value="What are your working hours and how can I get in touch with you?">Contact us</button>
+            <button class="back-button" onclick="backToMainMenu()">Back to Main Menu</button>
+        </div>
+
+        <div id="institution-page" class="page">
+            <p>Hello, I'm XYZ, and I'm here to assist you. How can I help you today? Please choose a query from the options below, or feel free to type your custom question.</p>
+            <button id= "op_int_1" class="option-button" onclick="sendMessage('op_int_1'), backToMainMenu()" value="How can I link my institute with GoFillForm?">Want to know how you can join?</button>
+            <button id= "op_int_2" class="option-button" onclick="sendMessage('op_int_2'), backToMainMenu()" value="what is Gofillform?">Want to know about Gofillform?</button>
+            <button id= "op_int_3" class="option-button" onclick="sendMessage('op_int_3'), backToMainMenu()" value="What are your working hours and how can I get in touch with you?">Contact us</button>
+            <button class="back-button" onclick="backToMainMenu()">Back to Main Menu</button>
+        </div>
+
+        <!-- Subpages for Options -->
+        <div id="applicant-option-1" class="page no-chat">
+            <p>Option 1 content</p>
+            <button class="back-button" onclick="backToPage('applicant-page')">Back to Options</button>
+        </div>
+
+        <div id="applicant-option-2" class="page no-chat">
+            <p>Option 2 content</p>
+            <button class="back-button" onclick="backToPage('applicant-page')">Back to Options</button>
+        </div>
+
+        <div id="applicant-option-3" class="page no-chat">
+            <p>Option 3 content</p>
+            <button class="back-button" onclick="backToPage('applicant-page')">Back to Options</button>
+        </div>
+
+        <div id="institution-option-1" class="page no-chat">
+            <p> Option 1 content</p>
+            <button class="back-button" onclick="backToPage('institution-page')">Back to Options</button>
+        </div>
+
+        <div id="institution-option-2" class="page no-chat">
+            <p>Option 2 content</p>
+            <button class="back-button" onclick="backToPage('institution-page')">Back to Options</button>
+        </div>
+
+        <div id="institution-option-3" class="page no-chat">
+            <p>Option 3 content</p>
+            <button class="back-button" onclick="backToPage('institution-page')">Back to Options</button>
+        </div>
+
+        <!-- Main chat messages -->
+        <div id="chat-messages"></div>
+
+        <div id="user-input-container" class="hide invisible">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button id="send-button" onclick="sendMessage('user-input'), backToMainMenu()">Send</button>
+        </div>
+    </div>
+
+    <script>
+        function showPage(pageId) {
+            // Hide chat messages and main menu buttons
+            document.getElementById('chat-messages').style.display = 'none';
+            document.getElementById('chat-buttons').style.display = 'none';
+
+            // Show the selected page
+            document.getElementById(pageId).style.display = 'flex';
+
+            console.log(pageId)
+            if (pageId == 'applicant-page') {
+                document.getElementById('user-input-container').classList.remove("hide");
+            }
+            if (pageId == 'institution-page') {
+                document.getElementById('user-input-container').classList.remove("hide");
+            }
+            // $(".invisible").toggleClass("show");
+
+        }
+
+        function showSubPage(subPageId) {
+            // Hide current page and show the selected subpage
+            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+            document.getElementById(subPageId).style.display = 'flex';
+
+            // Fetch and display question from the button value
+            const buttonValue = document.querySelector(`#${subPageId} .option-button`).value;
+            fetchRasaResponse(buttonValue);
+        }
+
+        function backToMainMenu() {
+            // Hide pages and show chat messages and main menu buttons
+            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+            document.getElementById('chat-messages').style.display = 'block';
+            document.getElementById('chat-buttons').style.display = 'flex';
+        }
+
+        function backToPage(pageId) {
+            // Hide current subpage and show the main page
+            document.querySelectorAll('.page').forEach(page => page.style.display = 'none');
+            document.getElementById(pageId).style.display = 'flex';
+        }
+        var hii = ""
+        const keywordArray = ["hi","hardcopy","pay","hello", "hola", "top", "trending", "good", "cost", "relatives", "complete", "profile", "information", "Gofillform", "go fill form","form", "download", "hard copy", 
+                              "safe", "secure", "protected", "responsible", "adjusting", "Application", "fees", 
+                              "countries", "international", "admission", "support", "services", 
+                              "account", "apply", "submission", "friend","friends", "contact", "program", "fee", "subject", 
+                              "track", "status", "claim", "refund", "policy", "policies", "notification","notifications", "updates", "update", "admissions", 
+                              "process", "registration", "help", "assistance", "Guidance", "filling", "details", "courses", 
+                              "undergrads", "postgrads", "graduation", "Apply", "Course", "working hours", "availability", 
+                              "communication", "ongoing", "offers", "discounts", "deals", "action", "delayed", "late", "closing", 
+                              "urgent", "news", "events", "institutional", "connection", "link", "connectivity", 
+                              "institute", "college", "university", "insights", "streams", "fields", "disciplines", 
+                              "specialization", "specifics", "focus", "application", "enrollment", "registration", "signup","sign-up", 
+                              "science", "pharmacy", "engineering", "arts", "commerce", "business", "medicine", "law", "architecture", 
+                              "payment", "methods", "transaction", "Individual", , "Business", 
+                              "alert", "popular", "trending","current", "up to date", "available", "right now","College","Individual","hottest"];
+
+        function sendMessage(hii) {
+
+                const userInput = document.getElementById(hii).value;
+                temp_input = userInput.toLowerCase();
+                const chatMessages = document.getElementById('chat-messages');
+
+                const containsKeyword = keywordArray.some(keyword => temp_input.includes(keyword));
+                if (containsKeyword){
+                    chatMessages.innerHTML += `<div>User: ${userInput}</div>`;
+                    fetchRasaResponse(userInput);
+                    document.getElementById('user-input').value = '';
+
+                }
+                else{
+                    if (userInput != ""){
+                        chatMessages.innerHTML += `<div>User: ${userInput}</div>`;
+                        document.getElementById('user-input').value = '';
+                        chatMessages.innerHTML += `<div>Rasa: I don't have knowledge about that please contact us at 123 for further assistance.</div>`;
+
+                    }else{
+                        chatMessages.innerHTML += `<div>Rasa: Please input your question so that I can help you.</div>`;
+
+                    }
+                    
+                    
+                    
+
+                }
+
+                // Display user message
+                
+
+                // Fetch and display response from Rasa
+                
+
+                // Clear user input
+                
+
+            
+            
+        }
+
+        async function fetchRasaResponse(message) {
+            try {
+                const response = await fetch('http://localhost:5005/webhooks/rest/webhook', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        sender: 'user',
+                        message: message,
+                    }),
+                });
+
+                const data = await response.json();
+                const rasaResponse = data && data.length > 0 ? data[0].text : 'No response from Rasa';
+                displayRasaResponse(rasaResponse);
+            } catch (error) {
+                console.error('Error fetching Rasa response:', error);
+            }
+        }
+
+        function displayRasaResponse(response) {
+            // Display Rasa response in the chat
+            const chatMessages = document.getElementById('chat-messages');
+            chatMessages.innerHTML += `<div>Rasa: ${response}</div>`;
+        }
+    </script>
+
+
+
+    <script>
+        //hide show btn js
+        //     function displayText() {
+        //   var text = document.getElementById("#user-input-container");
+        //   text.style.display = "block";
+        // }
+
+
+        // $(function () {
+        //     $("#visible").click(function () {
+        //         $(".invisible").toggleClass("show");
+        //     });
+        // });
+    </script>
+
+
+
+</body>
+
+</html>

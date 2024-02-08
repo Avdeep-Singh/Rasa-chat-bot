@@ -1,0 +1,362 @@
+version: "3.1"
+
+intents:
+   - nlu_fallback
+
+#  - greet
+#  - goodbye
+#  - affirm
+#  - deny
+#  - mood_great
+#  - mood_unhappy
+#  - bot_challenge
+actions:
+  - action_fallback
+
+responses:
+
+  utter_default:
+  - text: "reenter"
+  utter_please_rephrase:
+  - text: "I'm sorry, I didn't quite understand that. Could you rephrase?"
+
+  utter_ask_rephrase:
+  - text: "I'm sorry, I couldn't understand that. Could you please rephrase your question?"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_profile:
+  - text: "Gofillform’s profile information segment is split up into four sections.<br>
+  - Personal information<br>
+  - About your family<br>
+  - Your education<br>
+  - Your work experiences<br>
+  Gofillform captures the information along with all the supporting documents. By a complete profile, we mean a complete structured educational cum work experience profile. Your per-submission effort and stress are completely gone with an error-free complete profile."
+
+  utter_Gofillform:
+  - text: "Gofillform is the solution for all your application forms. Institutions will define the forms with respect to their program calendar. Gofillform provides a platform for online submission of your application form for the desired program/course. Register with Gofillform and keep your profile updated. Comeback search for the desired program, purchase the form to submit the application to the institution. No printouts, no couriers, no physical submission and no writing required. An error-free updated profile is what you require. Your struggle to physically buy application forms is over. The stress of application submission on or before closing date is over. Gofillform a complete solution for all your form needs."
+
+  utter_about_download:
+  - text: "Gofillform is a complete online service hence downloading a form is not required at all. However, you can print all your submitted applications for further processing at institutions or for your record. Gofillform allows you to download the institutions and associated program brochures."
+
+  utter_privacy:
+  - text: "Yes, your profile information is safe with Gofillform. Gofillform stores your password in an encrypted format. Your information is shared only with the institutions you applied for. Gofillform does not give third parties direct access to your data."
+
+  utter_fixing_application:
+  - text: "Application form charges are fixed by the institutions. Gofillform directly or indirectly does not reinforce the charges fixed by the institutions."
+
+  utter_froms_from_other_country:
+  - text: "No. currently we are serving only Indian institutes but we have great intension to extend our services to other countries as well."
+
+  utter_about_admisssion:
+  - text: "Yes, your profile information is safe with Gofillform. Gofillform stores your password in an encrypted format. Your information is shared only with the institutions you applied for. Gofillform does not give third parties direct access to your data"
+
+  utter_support_services:
+  - text: "Gofillform provides both online and offline support services. Gofillform’s online chat service will answer your queries and assist you as and when required. If you are unable to contact us via chat or want an offline service, please open a ticket and we will revert to you as soon as possible."
+
+  utter_friends_form:
+  - text: "Gofillform offers one account for one profile. You can not apply for a friend from your account. Your friend should have an individual account with profile information for online submission of forms."
+
+  utter_form_submission:
+  - text: "The forms are directly submitted to the institutions you applied for. Gofillform online and offline support team will assist you in real-time."
+
+  utter_program_fee:
+  - text: "Institutions define the program fee and they are the solely responsible for any changes in the fee structure. Gofillform is not liable for any changes in the program fee."
+
+  utter_application_status:
+  - text: "Your dashboard will take you to the application status information. Also, Gofillform sends SMS and E-mail to applicants to keep you informed about the application status."
+
+  utter_claim_for_refund:
+  - text: "You can not claim any kind of refund from Gofillform. The application fee you pay directly goes to the institutions after deducting a service charge. Gofillform does not charge anything from candidates for its services."
+  
+  utter_refund_policy_1:
+  - text: "You can not claim any kind of refund from Gofillform. The application fee you pay directly goes to the institutions after deducting a service charge. Gofillform does not charge anything from candidates for its services."
+  
+  utter_refund_policy_2:
+  - text: "You can not claim any kind of refund from Gofillform. The application fee you pay directly goes to the institutions after deducting a service charge. Gofillform does not charge anything from candidates for its services."
+  
+  utter_refund_policy_3:
+  - text: "You can not claim any kind of refund from Gofillform. The application fee you pay directly goes to the institutions after deducting a service charge. Gofillform does not charge anything from candidates for its services."
+
+  utter_developments_of_admission_process:
+  - text: "Gofillform will keep you informed about the application status and NOT the admission process. Gofillform’s SMS and E-mail services will keep you informed about the acceptance and rejection of your application. This information is also available on your dashboard. Institutions will strictly follow their rule and regulations for the admission procedure."
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_about_userbase:
+  - text: "Gofillform is an online form submission service. Registration will create an account to store your profile information securely. With a complete profile, you can submit any number of application forms across institutions in one go. You will have an overview of applications submitted. Also, you can maintain a wishlist of forms for your preferred institutions and programs."
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+
+  utter_guidance:
+  - text: "Register yourself and complete the profile to apply for all the courses and get the best recommendation. If still facing issue contact us at +91 9945141100 or info@gofillform.com"
+
+  utter_ug_course_information:
+  -  text: "Sure! You can explore under graduation courses from <a href='https://www.gofillform.com/in/search-form/bachelor' target='_blank'>here </a>"
+
+  utter_pg_course_information:
+  -  text: "Certainly! Information about post graduation courses can be found <a href='https://www.gofillform.com/in/search-form/master' target='_blank'>here </a>"
+
+  utter_all_courses_info:
+  -  text: "Gofillform provides 3 types of courses  <a href='https://www.gofillform.com/in/search-form/bachelor' target='_blank'>Under Graduation</a> ,  <a href='https://www.gofillform.com/in/search-form/master' target='_blank'>Post Graduation</a> and Doctorate"
+
+  utter_application_process:
+  -  text: "Here are the steps to apply for a course:
+      \n- Step 1: Register online, log in, and complete your profile by filling the detailed form.
+      \n- Step 2: Search and select your desired course/s and apply.
+      \n- Step 3: Check out and make payment." 
+
+  utter_contact_information:
+  - text: "For general inquiries, you can contact us at +91 9945141100 or email us at support@gofillform.com Our working hours are Monday to Friday, 9:00 AM to 6:00 PM IST."
+
+  utter_info_discounts_offers:
+  - text: "All the offers and discounts are applicable while checking out and you can check all the coupons before making payment on checkout page."
+
+  utter_actions_for_late_applications:
+  - text: "If you are late for submittion of your application, we recommend to contact the particular institute."
+
+  utter_application_closing_7days:
+  - text: "here is link for the applications that are closing with in <a href='https://www.gofillform.com/in/all-ending-form' target='_blank'>7 days</a> (NOTE: complete your profile for best recomendations). "
+
+  utter_news_event:
+  - text: "Stay updated with our institutional news and events <a href='https://www.gofillform.com/in/edu/all-news' target='_blank'>here </a>"
+
+  utter_link_your_institute:
+  - text: "To link your institute with Go Fill Form, follow the instructions provided <a href='https://www.gofillform.com/in/link-your-institute' target='_blank'>here </a>"
+
+
+  utter_insights:
+  - text: "Explore insights about Go Fill Form from <a href='https://www.gofillform.com/in/insights' target='_blank'>here </a>"
+
+  utter_list_of_streams:
+  - text: 'Here is the list of all the specialization that we have:- <br>
+          - Pharmaceutical sciences and healthcare: <a href="https://www.gofillform.com/in/course/Pharmacy" target="_blank">Click Here</a><br> 
+          - Finance, marketing, and entrepreneurship: <a href="https://www.gofillform.com/in/course/Business%20Management" target="_blank">Click Here</a><br>
+          - Physics, chemistry, and biology: <a href="https://www.gofillform.com/in/course/Science" target="_blank">Click Here</a><br>
+          - Healthcare and patient care skills: <a href="https://www.gofillform.com/in/course/Nursing" target="_blank">Click Here</a> <br>
+          - Literature, history, and philosophy: <a href="https://www.gofillform.com/in/course/Arts%20and%20Humanities" target="_blank">Click Here</a><br>
+          - Legal principles, justice, and advocacy: <a href="https://www.gofillform.com/in/course/Law" target="_blank">Click Here</a><br>
+          - Business, finance, and trade: <a href="https://www.gofillform.com/in/course/Commerce" target="_blank">Click Here</a><br>
+          - Design, construction, and urban planning:<a href="https://www.gofillform.com/in/course/Architecture" target="_blank">Click Here</a><br>'
+
+  utter_science_course_information:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Science' target='_blank'>Science courses</a>"
+
+  utter_pharmacy_course_information:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Pharmacy' target='_blank'>Pharmacy courses</a>"
+
+  utter_engineering_course_information:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Engineering' target='_blank'>Engineering courses</a>"
+
+  utter_arts_course_information:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Arts%20and%20Humanities' target='_blank'>Art and Humanities courses</a>"
+
+  utter_commerce_course_information:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Commerce' target='_blank'>Commerce courses</a>"
+
+  utter_medicine_course_information:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Medicine' target='_blank'>Medicine courses</a>."
+
+  utter_business_management_course_information:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Business%20Management' target='_blank'>Business Management courses</a>."
+
+  utter_nursing_course_information:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Nursing' target='_blank'>Nursing courses</a>."
+
+  utter_law_course_information:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Law' target='_blank'>Law courses</a>."
+
+  utter_architecture_course_information:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Architecture' target='_blank'>Architecture courses</a>."
+
+  utter_payment_methods:
+  - text: "Certainly! Here are the payment methods available on our platform:<br>
+            1. Visa<br>
+            2. Apple Pay<br>
+            3. Google Pay<br>
+            4. Discover<br>
+            5. Mastercard<br>
+            6. Stripe Pay<br>
+            7. Razor Pay"
+
+  utter_business:
+  - text: "Hello Business wellcome to Gofillform.<br>
+            Tell me how can I assist you?"     
+
+  utter_individual:
+  - text: "Hello Individual wellcome to Gofillform.<br>
+            Tell me how can I assist you?"     
+
+#reans__________________________________________________________________________________________________________________________________________
+#===============================================================================================================================================
+  utter_profile_r:
+  - text: "Gofillform’s profile information segment is split up into four sections.<br>
+          - Personal information<br>
+          - About your family<br>
+          - Your education<br>
+          - Your work experiences<br>
+          Gofillform captures the information along with all the supporting documents. By a complete profile, we mean a complete structured educational cum work experience profile. Your per-submission effort and stress are completely gone with an error-free complete profile."
+
+  utter_Gofillform_r:
+  - text: "Gofillform is the solution for all your application forms. Institutions will define the forms with respect to their program calendar. Gofillform provides a platform for online submission of your application form for the desired program/course. Register with Gofillform and keep your profile updated. Comeback search for the desired program, purchase the form to submit the application to the institution. No printouts, no couriers, no physical submission and no writing required. An error-free updated profile is what you require. Your struggle to physically buy application forms is over. The stress of application submission on or before closing date is over. Gofillform a complete solution for all your form needs."
+
+  utter_about_download_r:
+  - text: "Gofillform is a complete online service hence downloading a form is not required at all. However, you can print all your submitted applications for further processing at institutions or for your record. Gofillform allows you to download the institutions and associated program brochures."
+
+  utter_privacy_r:
+  - text: "Yes, your profile information is safe with Gofillform. Gofillform stores your password in an encrypted format. Your information is shared only with the institutions you applied for. Gofillform does not give third parties direct access to your data."
+
+  utter_fixing_application_r:
+  - text: "Application form charges are fixed by the institutions. Gofillform directly or indirectly does not reinforce the charges fixed by the institutions."
+
+  utter_froms_from_other_country_r:
+  - text: "No. currently we are serving only Indian institutes but we have great intension to extend our services to other countries as well."
+
+  utter_about_admisssion_r:
+  - text: "Yes, your profile information is safe with Gofillform. Gofillform stores your password in an encrypted format. Your information is shared only with the institutions you applied for. Gofillform does not give third parties direct access to your data"
+
+  utter_support_services_r:
+  - text: "Gofillform provides both online and offline support services. Gofillform’s online chat service will answer your queries and assist you as and when required. If you are unable to contact us via chat or want an offline service, please open a ticket and we will revert to you as soon as possible."
+
+  utter_friends_form_r:
+  - text: "Gofillform offers one account for one profile. You can not apply for a friend from your account. Your friend should have an individual account with profile information for online submission of forms."
+
+  utter_form_submission_r:
+  - text: "The forms are directly submitted to the institutions you applied for. Gofillform online and offline support team will assist you in real-time."
+
+  utter_program_fee_r:
+  - text: "Institutions define the program fee and they are the solely responsible for any changes in the fee structure. Gofillform is not liable for any changes in the program fee."
+
+  utter_application_status_r:
+  - text: "Your dashboard will take you to the application status information. Also, Gofillform sends SMS and E-mail to applicants to keep you informed about the application status."
+
+  utter_claim_for_refund_r:
+  - text: "You can not claim any kind of refund from Gofillform. The application fee you pay directly goes to the institutions after deducting a service charge. Gofillform does not charge anything from candidates for its services."
+
+  utter_developments_of_admission_process_r:
+  - text: "Gofillform will keep you informed about the application status and NOT the admission process. Gofillform’s SMS and E-mail services will keep you informed about the acceptance and rejection of your application. This information is also available on your dashboard. Institutions will strictly follow their rule and regulations for the admission procedure."
+
+  utter_happy_r:
+  - text: "Great, carry on!"
+
+  utter_about_userbase_r:
+  - text: "Gofillform is an online form submission service. Registration will create an account to store your profile information securely. With a complete profile, you can submit any number of application forms across institutions in one go. You will have an overview of applications submitted. Also, you can maintain a wishlist of forms for your preferred institutions and programs."
+
+  utter_goodbye_r:
+  - text: "Bye"
+
+  utter_iamabot_r:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_guidance_r:
+  - text: "Register yourself and complete the profile to apply for all the courses and get the best recommendation. If still facing issue contact us at +91 9945141100 or info@gofillform.com"
+
+  utter_ug_course_information_r:
+  -  text: "Sure! You can explore under graduation courses from <a href='https://www.gofillform.com/in/search-form/bachelor' target='_blank'>here </a>"
+
+  utter_pg_course_information_r:
+  -  text: "Certainly! Information about post graduation courses can be found <a href='https://www.gofillform.com/in/search-form/master' target='_blank'>here </a>"
+
+  utter_all_courses_info_r:
+  -  text: "Gofillform provides 3 types of courses  <a href='https://www.gofillform.com/in/search-form/bachelor' target='_blank'>Under Graduation</a> ,  <a href='https://www.gofillform.com/in/search-form/master' target='_blank'>Post Graduation</a> and Doctorate"
+
+  utter_application_process_r:
+  -  text: "Here are the steps to apply for a course:
+      \n- Step 1: Register online, log in, and complete your profile by filling the detailed form.
+      \n- Step 2: Search and select your desired course/s and apply.
+      \n- Step 3: Check out and make payment." 
+
+  utter_contact_information_r:
+  - text: "For general inquiries, you can contact us at +91 9945141100 or email us at support@gofillform.com Our working hours are Monday to Friday, 9:00 AM to 6:00 PM IST."
+
+  utter_info_discounts_offers_r:
+  - text: "All the offers and discounts are applicable while checking out and you can check all the coupons before making payment on checkout page."
+
+  utter_actions_for_late_applications_r:
+  - text: "If you are late for submittion of your application, we recommend to contact the particular institute."
+
+  utter_application_closing_7days_r:
+  - text: "here is link for the applications that are closing with in <a href='https://www.gofillform.com/in/all-ending-form' target='_blank'>7 days</a> (NOTE: complete your profile for best recomendations). "
+
+  utter_news_event_r:
+  - text: "Stay updated with our institutional news and events <a href='https://www.gofillform.com/in/edu/all-news' target='_blank'>here </a>"
+
+  utter_link_your_institute_r:
+  - text: "To link your institute with Go Fill Form, follow the instructions provided <a href='https://www.gofillform.com/in/link-your-institute' target='_blank'>here </a>"
+
+
+  utter_insights_r:
+  - text: "Explore insights about Go Fill Form from <a href='https://www.gofillform.com/in/insights' target='_blank'>here </a>"
+
+  utter_list_of_streams_r:
+  - text: 'Here is the list of all the specialization that we have:- <br>
+          - Pharmaceutical sciences and healthcare: <a href="https://www.gofillform.com/in/course/Pharmacy" target="_blank">Click Here</a><br> 
+          - Finance, marketing, and entrepreneurship: <a href="https://www.gofillform.com/in/course/Business%20Management" target="_blank">Click Here</a><br>
+          - Physics, chemistry, and biology: <a href="https://www.gofillform.com/in/course/Science" target="_blank">Click Here</a><br>
+          - Healthcare and patient care skills: <a href="https://www.gofillform.com/in/course/Nursing" target="_blank">Click Here</a> <br>
+          - Literature, history, and philosophy: <a href="https://www.gofillform.com/in/course/Arts%20and%20Humanities" target="_blank">Click Here</a><br>
+          - Legal principles, justice, and advocacy: <a href="https://www.gofillform.com/in/course/Law" target="_blank">Click Here</a><br>
+          - Business, finance, and trade: <a href="https://www.gofillform.com/in/course/Commerce" target="_blank">Click Here</a><br>
+          - Design, construction, and urban planning:<a href="https://www.gofillform.com/in/course/Architecture" target="_blank">Click Here</a><br>'
+
+  utter_science_course_information_r:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Science' target='_blank'>Science courses</a>"
+
+  utter_pharmacy_course_information_r:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Pharmacy' target='_blank'>Pharmacy courses</a>"
+
+  utter_engineering_course_information_r:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Engineering' target='_blank'>Engineering courses</a>"
+
+  utter_arts_course_information_r:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Arts%20and%20Humanities' target='_blank'>Art and Humanities courses</a>"
+
+  utter_commerce_course_information_r:
+  - text: "Certainly! here is detailed information about <a href='https://www.gofillform.com/in/course/Commerce' target='_blank'>Commerce courses</a>"
+
+  utter_medicine_course_information_r:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Medicine' target='_blank'>Medicine courses</a>."
+
+  utter_business_management_course_information_r:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Business%20Management' target='_blank'>Business Management courses</a>."
+
+  utter_nursing_course_information_r:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Nursing' target='_blank'>Nursing courses</a>."
+
+  utter_law_course_information_r:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Law' target='_blank'>Law courses</a>."
+
+  utter_architecture_course_information_r:
+  - text: "Certainly! Here is detailed information about <a href='https://www.gofillform.com/in/course/Architecture' target='_blank'>Architecture courses</a>."
+
+  utter_payment_methods_r:
+  - text: "Certainly! Here are the payment methods available on our platform:<br>
+            1. Visa<br>
+            2. Apple Pay<br>
+            3. Google Pay<br>
+            4. Discover<br>
+            5. Mastercard<br>
+            6. Stripe Pay<br>
+            7. Razor Pay"
+
+  utter_latest_courses:
+  - text: "Here is the list of all trending courses:<br>
+          - <a href='https://www.gofillform.com/in/trending_course/4' target='_blank'>Batchelor of Technology (B.tech)</a><br>
+          - <a href='https://www.gofillform.com/in/trending_course/8' target='_blank'>Batchelor of Laws (LLB)</a><br>
+          - <a href='https://www.gofillform.com/in/trending_course/17' target='_blank'>Master of Business Administration (MBA)</a><br>
+          - <a href='https://www.gofillform.com/in/trending_course/7' target='_blank'>Batchelor of Business Administration (BBA)</a><br>
+          - <a href='https://www.gofillform.com/in/trending_course/16' target='_blank'>Master of Commerce (M.Com)</a>"     
+
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+
